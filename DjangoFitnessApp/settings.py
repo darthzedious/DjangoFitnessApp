@@ -32,9 +32,11 @@ ALLOWED_HOSTS = []
 
 MY_APPS = [
     'DjangoFitnessApp.accounts',
+    'DjangoFitnessApp.home_app',
 ]
 
 INSTALLED_APPS = [
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -95,10 +97,10 @@ DATABASES = {
     }
 }
 
-# AUTHENTICATION_BACKENDS = [
-#     'DjangoFitnessApp.accounts.authentication.EmailOrUsernameBackend',
-#     'django.contrib.auth.backends.ModelBackend',
-# ]
+AUTHENTICATION_BACKENDS = [
+    'DjangoFitnessApp.accounts.authentication.EmailOrUsernameBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 
 # Password validation
@@ -136,6 +138,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'mediafiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
