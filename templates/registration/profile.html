@@ -5,6 +5,19 @@
         <div class="card shadow-lg">
             <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                 <h3 class="mb-0">Profile Details</h3>
+                {% if object.profile.goal.exists %}
+                    <a href="{% url 'diet-tracker' %}" class="btn btn-success">
+                        Diet Tracker
+                    </a>
+{#                {% if object.profile.goal.exists %}#}
+                    <a href="{% url 'goal-detail' object.profile.goal.last.pk %}" class="btn btn-success">
+                        View Goal
+                    </a>
+                {% else %}
+                    <a href="{% url 'goal-create' %}" class="btn btn-success">
+                        Set Goal
+                    </a>
+                {% endif %}
             </div>
 
             <div class="card-body">
@@ -29,11 +42,9 @@
                                 Not provided
                             {% endif %}
                         </p>
-
-                        <!-- Future Fields -->
-{#                        <p><strong>Height:</strong> {{ object.profile.height|default:"Not provided" }} cm</p>#}
-{#                        <p><strong>Weight:</strong> {{ object.profile.weight|default:"Not provided" }} kg</p>#}
-{#                        <p><strong>Biggest Goal:</strong> {{ biggest_goal|default:"No goals set" }}</p>#}
+                        <p><strong>Activity Level:</strong> {{ object.profile.goal.last.get_activity_display }}</p>
+                        <p><strong>Goal Type:</strong> {{ object.profile.goal.last.get_goal_type_display }}</p>
+                        <p><strong>Calories per day:</strong> {{ object.profile.goal.last.daily_calories }}</p>
                     </div>
                 </div>
             </div>

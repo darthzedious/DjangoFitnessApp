@@ -1,0 +1,35 @@
+{% extends 'home_templates/home.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Your Goals</h2>
+
+{%  if goals %}
+    {% for goal in goals %}
+    <div class="card mb-3 shadow">
+        <div class="card-body">
+            <h5 class="card-title">{{ goal.get_goal_type_display }}</h5>
+            <p class="card-text">
+                <strong>Created on:</strong> {{ goal.created_at|date:"F j, Y" }}<br>
+                <strong>Weight:</strong> {{ goal.weight }} kg | <strong>Goal Weight:</strong> {{ goal.goal_weight }} kg<br>
+                <strong>Height:</strong> {{ goal.height }} cm | <strong>Age:</strong> {{ goal.age }}<br>
+                <strong>Calories per day:</strong> {{ goal.daily_calories }}
+            </p>
+            <a href="{% url 'goal-detail' goal.pk %}" class="btn btn-primary btn-sm">View Details</a>
+            <a  href="{% url 'goal-delete' goal.pk %}" class="btn btn-danger btn-sm">Delete Goal</a>
+        </div>
+    </div>
+    {% empty %}
+    <p class="text-muted">No goals set yet. <a href="{% url 'goal-create' %}">Create one</a>.</p>
+    {% endfor %}
+
+ <!-- Pagination controls -->
+            <div class="text-center">
+                {% include 'home_templates/pagination.html' %}
+            </div>
+        {% else %}
+            <p class="text-muted">No goals found.</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

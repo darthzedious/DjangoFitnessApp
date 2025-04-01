@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7175677f-cbe6-4c5c-9f06-7baf31cbcdce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/accounts/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/accounts/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee/storage_v2/_src_/database/django_fitness_app.ZmRtag/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee/storage_v2/_src_/database/django_fitness_app.ZmRtag/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home_templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home_templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_templates/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/authentication.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/authentication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,65 +26,100 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "darthzedious"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;darthzedious&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/darthzedious/DjangoFitnessApp.git",
-    "accountId": "e4ffb197-2c1d-4630-841b-50d1cfe93113"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/darthzedious/DjangoFitnessApp.git&quot;,
+    &quot;accountId&quot;: &quot;e4ffb197-2c1d-4630-841b-50d1cfe93113&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DjangoFitnessApp/meals_app/models/daily_meal.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2uoE2OYklYw9skB3ujadwoFkrMB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.DjangoFitnessApp.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.DjangoFitnessApp.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.nav.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/DjangoFitnessApp" />
       <recent name="$PROJECT_DIR$/DjangoFitnessApp/accounts" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.DjangoFitnessApp">
+    <configuration name="home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DjangoFitnessApp/templates/home_templates/home.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="nav.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DjangoFitnessApp/templates/home_templates/nav.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="t" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DjangoFitnessApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mediafiles/profile_pictures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mediafiles/profile_pictures/t.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="DjangoFitnessApp" type="Python.DjangoServer" factoryName="Django server">
       <module name="DjangoFitnessApp" />
       <option name="ENV_FILES" value="" />
@@ -101,6 +145,13 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.t" />
+        <item itemvalue="JavaScript Debug.nav.html" />
+        <item itemvalue="JavaScript Debug.home.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,11 +169,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742906318070</updated>
-      <workItem from="1742906319087" duration="6325000" />
+      <workItem from="1742906319087" duration="17486000" />
+      <workItem from="1742987569152" duration="66991000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DjangoFitnessApp$t.coverage" NAME="t Coverage Results" MODIFIED="1742948794608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mediafiles/profile_pictures" />
   </component>
 </project>

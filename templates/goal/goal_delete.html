@@ -1,0 +1,24 @@
+{% extends "home_templates/home.html" %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="card shadow-lg">
+      <div class="card-header bg-danger text-white text-center">
+        <h3>Confirm Goal Deletion</h3>
+      </div>
+      <div class="card-body">
+        <p>Are you sure you want to delete the goal for <strong>{{ goal.profile.first_name }} {{ goal.profile.last_name }}</strong>?</p>
+        <p><strong>Current Weight:</strong> {{ goal.weight }} kg</p>
+        <p><strong>Goal Weight:</strong> {{ goal.goal_weight }} kg</p>
+        <p><strong>Height:</strong> {{ goal.height }} cm</p>
+        <p><strong>Age:</strong> {{ goal.age }}</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete Goal</button>
+            <a href="{% url 'goal-list' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

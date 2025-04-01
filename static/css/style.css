@@ -1,3 +1,94 @@
-body {
-    background-color: #f8f9fa;
+/*body {*/
+/*    background-color: #f8f9fa;*/
+/*}*/
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('fitness-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+        }
+        .hero-content {
+            max-width: 700px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .cta-buttons a {
+            margin: 10px;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        .cta-buttons .btn-primary {
+            background-color: #ff5722;
+            border: none;
+        }
+        .cta-buttons .btn-outline-light {
+            border: 2px solid white;
+        }
+        .feature-box {
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.pagination .page-item {
+    margin: 0 3px;
+}
+
+.pagination .page-link {
+    display: block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.pagination .page-link:hover {
+    background-color: #0056b3;
+    border: 1px solid #004085;
+}
+
+.pagination .active .page-link {
+    background-color: #ff5722;
+    border-color: #ff5722;
+    font-weight: bold;
+    cursor: default;
+}
+
+.pagination .disabled .page-link {
+    background-color: #ddd;
+    color: #666;
+    cursor: not-allowed;
 }

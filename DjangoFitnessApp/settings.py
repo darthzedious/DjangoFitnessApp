@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 MY_APPS = [
     'DjangoFitnessApp.accounts',
     'DjangoFitnessApp.home_app',
+    'DjangoFitnessApp.goal_app',
+    'DjangoFitnessApp.meals_app',
 ]
 
 INSTALLED_APPS = [
@@ -89,7 +91,7 @@ WSGI_APPLICATION = 'DjangoFitnessApp.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "django_fitness_app",
+        "NAME": "fitness_app_django",
         "USER": "postgres",
         "PASSWORD": "password",
         "HOST": "127.0.0.1",
