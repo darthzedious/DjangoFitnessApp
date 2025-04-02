@@ -26,6 +26,17 @@ class DailyMealForm(forms.ModelForm):
             'grams',
         ]
 
+
+class DailyMealDeleteForm(forms.ModelForm):
+    # Define fields to display consumption data (readonly)
+    total_calories = forms.FloatField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+    total_protein = forms.FloatField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+    total_carbs = forms.FloatField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+    total_fats = forms.FloatField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+
+    class Meta:
+        model = DailyMeal
+        fields = []
 #
 # class MealSearchForm(forms.Form):
 #     query = forms.CharField(

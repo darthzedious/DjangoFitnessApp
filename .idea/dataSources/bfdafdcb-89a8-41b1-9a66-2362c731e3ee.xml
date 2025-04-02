@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>1385</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1410</IntrospectionStateNumber>
       <ServerVersion>17.2</ServerVersion>
-      <StartupTime>1743588501</StartupTime>
+      <StartupTime>1743605247</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1414,7 +1406,7 @@ true posixrules
 13219||10|C|G
 13219||-9223372036854775808|U|G
 13219||10|U|G</Grants>
-      <IntrospectionStateNumber>1385</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1410</IntrospectionStateNumber>
       <ObjectId>17183</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4855,8 +4847,8 @@ true posixrules
     <schema id="268" parent="4" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1385</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-04-02.11:47:55</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1410</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-04-02.15:12:37</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -8297,7 +8289,15 @@ true posixrules
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="523" parent="268" name="meals_app_dailymeal_id_seq">
+    <sequence id="523" parent="268" name="meals_app_dailyconsumption_id_seq">
+      <ObjectId>17392</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1399</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="524" parent="268" name="meals_app_dailymeal_id_seq">
       <ObjectId>17364</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
@@ -8305,7 +8305,7 @@ true posixrules
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="524" parent="268" name="meals_app_meal_id_seq">
+    <sequence id="525" parent="268" name="meals_app_meal_id_seq">
       <ObjectId>17356</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
@@ -8313,91 +8313,97 @@ true posixrules
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="525" parent="268" name="accounts_appuser">
+    <table id="526" parent="268" name="accounts_appuser">
       <ObjectId>17247</ObjectId>
       <StateNumber>1329</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="526" parent="268" name="accounts_appuser_groups">
+    <table id="527" parent="268" name="accounts_appuser_groups">
       <ObjectId>17257</ObjectId>
       <StateNumber>1329</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="527" parent="268" name="accounts_appuser_user_permissions">
+    <table id="528" parent="268" name="accounts_appuser_user_permissions">
       <ObjectId>17263</ObjectId>
       <StateNumber>1329</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="528" parent="268" name="accounts_profile">
+    <table id="529" parent="268" name="accounts_profile">
       <ObjectId>17268</ObjectId>
       <StateNumber>1331</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="529" parent="268" name="auth_group">
+    <table id="530" parent="268" name="auth_group">
       <ObjectId>17207</ObjectId>
       <StateNumber>1316</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="530" parent="268" name="auth_group_permissions">
+    <table id="531" parent="268" name="auth_group_permissions">
       <ObjectId>17215</ObjectId>
       <StateNumber>1316</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="531" parent="268" name="auth_permission">
+    <table id="532" parent="268" name="auth_permission">
       <ObjectId>17201</ObjectId>
       <StateNumber>1316</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="532" parent="268" name="django_admin_log">
+    <table id="533" parent="268" name="django_admin_log">
       <ObjectId>17309</ObjectId>
       <StateNumber>1332</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="533" parent="268" name="django_content_type">
+    <table id="534" parent="268" name="django_content_type">
       <ObjectId>17193</ObjectId>
       <StateNumber>1316</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="534" parent="268" name="django_migrations">
+    <table id="535" parent="268" name="django_migrations">
       <ObjectId>17185</ObjectId>
       <StateNumber>1313</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="535" parent="268" name="django_session">
+    <table id="536" parent="268" name="django_session">
       <ObjectId>17382</ObjectId>
       <StateNumber>1346</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="536" parent="268" name="goal_app_goal">
+    <table id="537" parent="268" name="goal_app_goal">
       <ObjectId>17330</ObjectId>
       <StateNumber>1343</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="537" parent="268" name="meals_app_dailymeal">
+    <table id="538" parent="268" name="meals_app_dailyconsumption">
+      <ObjectId>17393</ObjectId>
+      <StateNumber>1399</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="539" parent="268" name="meals_app_dailymeal">
       <ObjectId>17365</ObjectId>
       <StateNumber>1344</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="538" parent="268" name="meals_app_meal">
+    <table id="540" parent="268" name="meals_app_meal">
       <ObjectId>17357</ObjectId>
       <StateNumber>1344</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="539" parent="525" name="id">
+    <column id="541" parent="526" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -8406,55 +8412,55 @@ true posixrules
       <SequenceId>17246</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="540" parent="525" name="password">
+    <column id="542" parent="526" name="password">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>varchar(128)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="541" parent="525" name="last_login">
+    <column id="543" parent="526" name="last_login">
       <Position>3</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <column id="542" parent="525" name="is_superuser">
+    <column id="544" parent="526" name="is_superuser">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <column id="543" parent="525" name="email">
+    <column id="545" parent="526" name="email">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>varchar(254)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="544" parent="525" name="username">
+    <column id="546" parent="526" name="username">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="545" parent="525" name="is_staff">
+    <column id="547" parent="526" name="is_staff">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <column id="546" parent="525" name="is_active">
+    <column id="548" parent="526" name="is_active">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <index id="547" parent="525" name="accounts_appuser_pkey">
+    <index id="549" parent="526" name="accounts_appuser_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17250</ObjectId>
@@ -8463,7 +8469,7 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="548" parent="525" name="accounts_appuser_email_key">
+    <index id="550" parent="526" name="accounts_appuser_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17252</ObjectId>
@@ -8474,7 +8480,7 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="549" parent="525" name="accounts_appuser_username_key">
+    <index id="551" parent="526" name="accounts_appuser_username_key">
       <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17254</ObjectId>
@@ -8485,7 +8491,7 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="550" parent="525" name="accounts_appuser_email_fcba8a35_like">
+    <index id="552" parent="526" name="accounts_appuser_email_fcba8a35_like">
       <ColNames>email</ColNames>
       <ObjectId>17273</ObjectId>
       <StateNumber>1329</StateNumber>
@@ -8497,7 +8503,7 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="551" parent="525" name="accounts_appuser_username_9abbb925_like">
+    <index id="553" parent="526" name="accounts_appuser_username_9abbb925_like">
       <ColNames>username</ColNames>
       <ObjectId>17274</ObjectId>
       <StateNumber>1329</StateNumber>
@@ -8509,26 +8515,26 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="552" parent="525" name="accounts_appuser_pkey">
+    <key id="554" parent="526" name="accounts_appuser_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17251</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1329</StateNumber>
       <UnderlyingIndexId>17250</UnderlyingIndexId>
     </key>
-    <key id="553" parent="525" name="accounts_appuser_email_key">
+    <key id="555" parent="526" name="accounts_appuser_email_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17253</ObjectId>
       <StateNumber>1329</StateNumber>
       <UnderlyingIndexId>17252</UnderlyingIndexId>
     </key>
-    <key id="554" parent="525" name="accounts_appuser_username_key">
+    <key id="556" parent="526" name="accounts_appuser_username_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17255</ObjectId>
       <StateNumber>1329</StateNumber>
       <UnderlyingIndexId>17254</UnderlyingIndexId>
     </key>
-    <column id="555" parent="526" name="id">
+    <column id="557" parent="527" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -8537,21 +8543,21 @@ true posixrules
       <SequenceId>17256</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="556" parent="526" name="appuser_id">
+    <column id="558" parent="527" name="appuser_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="557" parent="526" name="group_id">
+    <column id="559" parent="527" name="group_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="558" parent="526" name="accounts_appuser_gro_appuser_id_8059e673_fk_accounts_">
+    <foreign-key id="560" parent="527" name="accounts_appuser_gro_appuser_id_8059e673_fk_accounts_">
       <ColNames>appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -8560,7 +8566,7 @@ true posixrules
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17247</RefTableId>
     </foreign-key>
-    <foreign-key id="559" parent="526" name="accounts_appuser_groups_group_id_1f2a7f05_fk_auth_group_id">
+    <foreign-key id="561" parent="527" name="accounts_appuser_groups_group_id_1f2a7f05_fk_auth_group_id">
       <ColNames>group_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -8569,7 +8575,7 @@ true posixrules
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17207</RefTableId>
     </foreign-key>
-    <index id="560" parent="526" name="accounts_appuser_groups_pkey">
+    <index id="562" parent="527" name="accounts_appuser_groups_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17260</ObjectId>
@@ -8578,7 +8584,7 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="561" parent="526" name="accounts_appuser_groups_appuser_id_group_id_1c61332a_uniq">
+    <index id="563" parent="527" name="accounts_appuser_groups_appuser_id_group_id_1c61332a_uniq">
       <ColNames>appuser_id
 group_id</ColNames>
       <ObjectId>17275</ObjectId>
@@ -8586,31 +8592,31 @@ group_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="562" parent="526" name="accounts_appuser_groups_appuser_id_8059e673">
+    <index id="564" parent="527" name="accounts_appuser_groups_appuser_id_8059e673">
       <ColNames>appuser_id</ColNames>
       <ObjectId>17287</ObjectId>
       <StateNumber>1329</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="563" parent="526" name="accounts_appuser_groups_group_id_1f2a7f05">
+    <index id="565" parent="527" name="accounts_appuser_groups_group_id_1f2a7f05">
       <ColNames>group_id</ColNames>
       <ObjectId>17288</ObjectId>
       <StateNumber>1329</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="564" parent="526" name="accounts_appuser_groups_pkey">
+    <key id="566" parent="527" name="accounts_appuser_groups_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17261</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1329</StateNumber>
       <UnderlyingIndexId>17260</UnderlyingIndexId>
     </key>
-    <key id="565" parent="526" name="accounts_appuser_groups_appuser_id_group_id_1c61332a_uniq">
+    <key id="567" parent="527" name="accounts_appuser_groups_appuser_id_group_id_1c61332a_uniq">
       <ObjectId>17276</ObjectId>
       <StateNumber>1329</StateNumber>
       <UnderlyingIndexId>17275</UnderlyingIndexId>
     </key>
-    <column id="566" parent="527" name="id">
+    <column id="568" parent="528" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -8619,21 +8625,21 @@ group_id</ColNames>
       <SequenceId>17262</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="567" parent="527" name="appuser_id">
+    <column id="569" parent="528" name="appuser_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="568" parent="527" name="permission_id">
+    <column id="570" parent="528" name="permission_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="569" parent="527" name="accounts_appuser_use_appuser_id_fabd3054_fk_accounts_">
+    <foreign-key id="571" parent="528" name="accounts_appuser_use_appuser_id_fabd3054_fk_accounts_">
       <ColNames>appuser_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -8642,7 +8648,7 @@ group_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17247</RefTableId>
     </foreign-key>
-    <foreign-key id="570" parent="527" name="accounts_appuser_use_permission_id_01c51db4_fk_auth_perm">
+    <foreign-key id="572" parent="528" name="accounts_appuser_use_permission_id_01c51db4_fk_auth_perm">
       <ColNames>permission_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -8651,7 +8657,7 @@ group_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17201</RefTableId>
     </foreign-key>
-    <index id="571" parent="527" name="accounts_appuser_user_permissions_pkey">
+    <index id="573" parent="528" name="accounts_appuser_user_permissions_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17266</ObjectId>
@@ -8660,7 +8666,7 @@ group_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="572" parent="527" name="accounts_appuser_user_pe_appuser_id_permission_id_95df51f8_uniq">
+    <index id="574" parent="528" name="accounts_appuser_user_pe_appuser_id_permission_id_95df51f8_uniq">
       <ColNames>appuser_id
 permission_id</ColNames>
       <ObjectId>17289</ObjectId>
@@ -8668,62 +8674,62 @@ permission_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="573" parent="527" name="accounts_appuser_user_permissions_appuser_id_fabd3054">
+    <index id="575" parent="528" name="accounts_appuser_user_permissions_appuser_id_fabd3054">
       <ColNames>appuser_id</ColNames>
       <ObjectId>17301</ObjectId>
       <StateNumber>1329</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="574" parent="527" name="accounts_appuser_user_permissions_permission_id_01c51db4">
+    <index id="576" parent="528" name="accounts_appuser_user_permissions_permission_id_01c51db4">
       <ColNames>permission_id</ColNames>
       <ObjectId>17302</ObjectId>
       <StateNumber>1329</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="575" parent="527" name="accounts_appuser_user_permissions_pkey">
+    <key id="577" parent="528" name="accounts_appuser_user_permissions_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17267</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1329</StateNumber>
       <UnderlyingIndexId>17266</UnderlyingIndexId>
     </key>
-    <key id="576" parent="527" name="accounts_appuser_user_pe_appuser_id_permission_id_95df51f8_uniq">
+    <key id="578" parent="528" name="accounts_appuser_user_pe_appuser_id_permission_id_95df51f8_uniq">
       <ObjectId>17290</ObjectId>
       <StateNumber>1329</StateNumber>
       <UnderlyingIndexId>17289</UnderlyingIndexId>
     </key>
-    <column id="577" parent="528" name="user_id">
+    <column id="579" parent="529" name="user_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="578" parent="528" name="first_name">
+    <column id="580" parent="529" name="first_name">
       <Position>2</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>varchar(30)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="579" parent="528" name="last_name">
+    <column id="581" parent="529" name="last_name">
       <Position>3</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>varchar(30)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="580" parent="528" name="date_of_birth">
+    <column id="582" parent="529" name="date_of_birth">
       <Position>4</Position>
       <StateNumber>1329</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
-    <column id="581" parent="528" name="profile_picture">
+    <column id="583" parent="529" name="profile_picture">
       <Position>5</Position>
       <StateNumber>1331</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="582" parent="528" name="accounts_profile_user_id_49a85d32_fk_accounts_appuser_id">
+    <foreign-key id="584" parent="529" name="accounts_profile_user_id_49a85d32_fk_accounts_appuser_id">
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -8732,7 +8738,7 @@ permission_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17247</RefTableId>
     </foreign-key>
-    <index id="583" parent="528" name="accounts_profile_pkey">
+    <index id="585" parent="529" name="accounts_profile_pkey">
       <ColNames>user_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17271</ObjectId>
@@ -8741,14 +8747,14 @@ permission_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="584" parent="528" name="accounts_profile_pkey">
+    <key id="586" parent="529" name="accounts_profile_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17272</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1329</StateNumber>
       <UnderlyingIndexId>17271</UnderlyingIndexId>
     </key>
-    <column id="585" parent="529" name="id">
+    <column id="587" parent="530" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -8757,14 +8763,14 @@ permission_id</ColNames>
       <SequenceId>17206</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="586" parent="529" name="name">
+    <column id="588" parent="530" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1326</StateNumber>
       <StoredType>varchar(150)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="587" parent="529" name="auth_group_pkey">
+    <index id="589" parent="530" name="auth_group_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17210</ObjectId>
@@ -8773,7 +8779,7 @@ permission_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="588" parent="529" name="auth_group_name_key">
+    <index id="590" parent="530" name="auth_group_name_key">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17243</ObjectId>
@@ -8784,7 +8790,7 @@ permission_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="589" parent="529" name="auth_group_name_a6ea08ec_like">
+    <index id="591" parent="530" name="auth_group_name_a6ea08ec_like">
       <ColNames>name</ColNames>
       <ObjectId>17245</ObjectId>
       <StateNumber>1326</StateNumber>
@@ -8796,20 +8802,20 @@ permission_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="590" parent="529" name="auth_group_pkey">
+    <key id="592" parent="530" name="auth_group_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17211</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1316</StateNumber>
       <UnderlyingIndexId>17210</UnderlyingIndexId>
     </key>
-    <key id="591" parent="529" name="auth_group_name_key">
+    <key id="593" parent="530" name="auth_group_name_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17244</ObjectId>
       <StateNumber>1326</StateNumber>
       <UnderlyingIndexId>17243</UnderlyingIndexId>
     </key>
-    <column id="592" parent="530" name="id">
+    <column id="594" parent="531" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -8818,21 +8824,21 @@ permission_id</ColNames>
       <SequenceId>17214</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="593" parent="530" name="group_id">
+    <column id="595" parent="531" name="group_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1316</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="594" parent="530" name="permission_id">
+    <column id="596" parent="531" name="permission_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1316</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="595" parent="530" name="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id">
+    <foreign-key id="597" parent="531" name="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id">
       <ColNames>group_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -8841,7 +8847,7 @@ permission_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17207</RefTableId>
     </foreign-key>
-    <foreign-key id="596" parent="530" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
+    <foreign-key id="598" parent="531" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
       <ColNames>permission_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -8850,7 +8856,7 @@ permission_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17201</RefTableId>
     </foreign-key>
-    <index id="597" parent="530" name="auth_group_permissions_pkey">
+    <index id="599" parent="531" name="auth_group_permissions_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17218</ObjectId>
@@ -8859,7 +8865,7 @@ permission_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="598" parent="530" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+    <index id="600" parent="531" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
       <ColNames>group_id
 permission_id</ColNames>
       <ObjectId>17229</ObjectId>
@@ -8867,31 +8873,31 @@ permission_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="599" parent="530" name="auth_group_permissions_group_id_b120cbf9">
+    <index id="601" parent="531" name="auth_group_permissions_group_id_b120cbf9">
       <ColNames>group_id</ColNames>
       <ObjectId>17241</ObjectId>
       <StateNumber>1316</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="600" parent="530" name="auth_group_permissions_permission_id_84c5c92e">
+    <index id="602" parent="531" name="auth_group_permissions_permission_id_84c5c92e">
       <ColNames>permission_id</ColNames>
       <ObjectId>17242</ObjectId>
       <StateNumber>1316</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="601" parent="530" name="auth_group_permissions_pkey">
+    <key id="603" parent="531" name="auth_group_permissions_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17219</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1316</StateNumber>
       <UnderlyingIndexId>17218</UnderlyingIndexId>
     </key>
-    <key id="602" parent="530" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+    <key id="604" parent="531" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
       <ObjectId>17230</ObjectId>
       <StateNumber>1316</StateNumber>
       <UnderlyingIndexId>17229</UnderlyingIndexId>
     </key>
-    <column id="603" parent="531" name="id">
+    <column id="605" parent="532" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -8900,28 +8906,28 @@ permission_id</ColNames>
       <SequenceId>17200</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="604" parent="531" name="name">
+    <column id="606" parent="532" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1318</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="605" parent="531" name="content_type_id">
+    <column id="607" parent="532" name="content_type_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1316</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="606" parent="531" name="codename">
+    <column id="608" parent="532" name="codename">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1316</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="607" parent="531" name="auth_permission_content_type_id_2f476e4b_fk_django_co">
+    <foreign-key id="609" parent="532" name="auth_permission_content_type_id_2f476e4b_fk_django_co">
       <ColNames>content_type_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -8930,7 +8936,7 @@ permission_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17193</RefTableId>
     </foreign-key>
-    <index id="608" parent="531" name="auth_permission_pkey">
+    <index id="610" parent="532" name="auth_permission_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17204</ObjectId>
@@ -8939,7 +8945,7 @@ permission_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="609" parent="531" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+    <index id="611" parent="532" name="auth_permission_content_type_id_codename_01ab375a_uniq">
       <ColNames>content_type_id
 codename</ColNames>
       <ObjectId>17220</ObjectId>
@@ -8953,31 +8959,31 @@ pg_catalog</CollationParentNames>
       <CollationNames>
 default</CollationNames>
     </index>
-    <index id="610" parent="531" name="auth_permission_content_type_id_2f476e4b">
+    <index id="612" parent="532" name="auth_permission_content_type_id_2f476e4b">
       <ColNames>content_type_id</ColNames>
       <ObjectId>17227</ObjectId>
       <StateNumber>1316</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="611" parent="531" name="auth_permission_pkey">
+    <key id="613" parent="532" name="auth_permission_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17205</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1316</StateNumber>
       <UnderlyingIndexId>17204</UnderlyingIndexId>
     </key>
-    <key id="612" parent="531" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+    <key id="614" parent="532" name="auth_permission_content_type_id_codename_01ab375a_uniq">
       <ObjectId>17221</ObjectId>
       <StateNumber>1316</StateNumber>
       <UnderlyingIndexId>17220</UnderlyingIndexId>
     </key>
-    <check id="613" parent="532" name="django_admin_log_action_flag_check">
+    <check id="615" parent="533" name="django_admin_log_action_flag_check">
       <ColNames>action_flag</ColNames>
       <ObjectId>17312</ObjectId>
       <Predicate>action_flag &gt;= 0</Predicate>
       <StateNumber>1332</StateNumber>
     </check>
-    <column id="614" parent="532" name="id">
+    <column id="616" parent="533" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -8986,54 +8992,54 @@ default</CollationNames>
       <SequenceId>17308</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="615" parent="532" name="action_time">
+    <column id="617" parent="533" name="action_time">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1332</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <column id="616" parent="532" name="object_id">
+    <column id="618" parent="533" name="object_id">
       <Position>3</Position>
       <StateNumber>1332</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="617" parent="532" name="object_repr">
+    <column id="619" parent="533" name="object_repr">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1332</StateNumber>
       <StoredType>varchar(200)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="618" parent="532" name="action_flag">
+    <column id="620" parent="533" name="action_flag">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1332</StateNumber>
       <StoredType>smallint|0s</StoredType>
       <TypeId>21</TypeId>
     </column>
-    <column id="619" parent="532" name="change_message">
+    <column id="621" parent="533" name="change_message">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>1332</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="620" parent="532" name="content_type_id">
+    <column id="622" parent="533" name="content_type_id">
       <Position>7</Position>
       <StateNumber>1332</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="621" parent="532" name="user_id">
+    <column id="623" parent="533" name="user_id">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>1332</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="622" parent="532" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
+    <foreign-key id="624" parent="533" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
       <ColNames>content_type_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -9042,7 +9048,7 @@ default</CollationNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17193</RefTableId>
     </foreign-key>
-    <foreign-key id="623" parent="532" name="django_admin_log_user_id_c564eba6_fk_accounts_appuser_id">
+    <foreign-key id="625" parent="533" name="django_admin_log_user_id_c564eba6_fk_accounts_appuser_id">
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -9051,7 +9057,7 @@ default</CollationNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17247</RefTableId>
     </foreign-key>
-    <index id="624" parent="532" name="django_admin_log_pkey">
+    <index id="626" parent="533" name="django_admin_log_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17315</ObjectId>
@@ -9060,26 +9066,26 @@ default</CollationNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="625" parent="532" name="django_admin_log_content_type_id_c4bce8eb">
+    <index id="627" parent="533" name="django_admin_log_content_type_id_c4bce8eb">
       <ColNames>content_type_id</ColNames>
       <ObjectId>17327</ObjectId>
       <StateNumber>1332</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="626" parent="532" name="django_admin_log_user_id_c564eba6">
+    <index id="628" parent="533" name="django_admin_log_user_id_c564eba6">
       <ColNames>user_id</ColNames>
       <ObjectId>17328</ObjectId>
       <StateNumber>1332</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="627" parent="532" name="django_admin_log_pkey">
+    <key id="629" parent="533" name="django_admin_log_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17316</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1332</StateNumber>
       <UnderlyingIndexId>17315</UnderlyingIndexId>
     </key>
-    <column id="628" parent="533" name="id">
+    <column id="630" parent="534" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -9088,21 +9094,21 @@ default</CollationNames>
       <SequenceId>17192</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="629" parent="533" name="app_label">
+    <column id="631" parent="534" name="app_label">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1314</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="630" parent="533" name="model">
+    <column id="632" parent="534" name="model">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1314</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="631" parent="533" name="django_content_type_pkey">
+    <index id="633" parent="534" name="django_content_type_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17196</ObjectId>
@@ -9111,7 +9117,7 @@ default</CollationNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="632" parent="533" name="django_content_type_app_label_model_76bd3d3b_uniq">
+    <index id="634" parent="534" name="django_content_type_app_label_model_76bd3d3b_uniq">
       <ColNames>app_label
 model</ColNames>
       <ObjectId>17198</ObjectId>
@@ -9125,19 +9131,19 @@ default</CollationNames>
       <CollationParentNames>pg_catalog
 pg_catalog</CollationParentNames>
     </index>
-    <key id="633" parent="533" name="django_content_type_pkey">
+    <key id="635" parent="534" name="django_content_type_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17197</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1314</StateNumber>
       <UnderlyingIndexId>17196</UnderlyingIndexId>
     </key>
-    <key id="634" parent="533" name="django_content_type_app_label_model_76bd3d3b_uniq">
+    <key id="636" parent="534" name="django_content_type_app_label_model_76bd3d3b_uniq">
       <ObjectId>17199</ObjectId>
       <StateNumber>1314</StateNumber>
       <UnderlyingIndexId>17198</UnderlyingIndexId>
     </key>
-    <column id="635" parent="534" name="id">
+    <column id="637" parent="535" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -9146,28 +9152,28 @@ pg_catalog</CollationParentNames>
       <SequenceId>17184</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="636" parent="534" name="app">
+    <column id="638" parent="535" name="app">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1313</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="637" parent="534" name="name">
+    <column id="639" parent="535" name="name">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1313</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="638" parent="534" name="applied">
+    <column id="640" parent="535" name="applied">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1313</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <index id="639" parent="534" name="django_migrations_pkey">
+    <index id="641" parent="535" name="django_migrations_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17190</ObjectId>
@@ -9176,35 +9182,35 @@ pg_catalog</CollationParentNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="640" parent="534" name="django_migrations_pkey">
+    <key id="642" parent="535" name="django_migrations_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17191</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1313</StateNumber>
       <UnderlyingIndexId>17190</UnderlyingIndexId>
     </key>
-    <column id="641" parent="535" name="session_key">
+    <column id="643" parent="536" name="session_key">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1346</StateNumber>
       <StoredType>varchar(40)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="642" parent="535" name="session_data">
+    <column id="644" parent="536" name="session_data">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1346</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="643" parent="535" name="expire_date">
+    <column id="645" parent="536" name="expire_date">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1346</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <index id="644" parent="535" name="django_session_pkey">
+    <index id="646" parent="536" name="django_session_pkey">
       <ColNames>session_key</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17387</ObjectId>
@@ -9216,7 +9222,7 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="645" parent="535" name="django_session_session_key_c0390e0f_like">
+    <index id="647" parent="536" name="django_session_session_key_c0390e0f_like">
       <ColNames>session_key</ColNames>
       <ObjectId>17389</ObjectId>
       <StateNumber>1346</StateNumber>
@@ -9228,26 +9234,26 @@ pg_catalog</CollationParentNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="646" parent="535" name="django_session_expire_date_a5c62663">
+    <index id="648" parent="536" name="django_session_expire_date_a5c62663">
       <ColNames>expire_date</ColNames>
       <ObjectId>17390</ObjectId>
       <StateNumber>1346</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="647" parent="535" name="django_session_pkey">
+    <key id="649" parent="536" name="django_session_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17388</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1346</StateNumber>
       <UnderlyingIndexId>17387</UnderlyingIndexId>
     </key>
-    <check id="648" parent="536" name="goal_app_goal_age_check">
+    <check id="650" parent="537" name="goal_app_goal_age_check">
       <ColNames>age</ColNames>
       <ObjectId>17333</ObjectId>
       <Predicate>age &gt;= 0</Predicate>
       <StateNumber>1336</StateNumber>
     </check>
-    <column id="649" parent="536" name="id">
+    <column id="651" parent="537" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -9256,94 +9262,94 @@ pg_catalog</CollationParentNames>
       <SequenceId>17329</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="650" parent="536" name="weight">
+    <column id="652" parent="537" name="weight">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1336</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="651" parent="536" name="height">
+    <column id="653" parent="537" name="height">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1336</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="652" parent="536" name="age">
+    <column id="654" parent="537" name="age">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1336</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="653" parent="536" name="gender">
+    <column id="655" parent="537" name="gender">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1336</StateNumber>
       <StoredType>varchar(10)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="654" parent="536" name="activity">
+    <column id="656" parent="537" name="activity">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>1336</StateNumber>
       <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="655" parent="536" name="goal_weight">
+    <column id="657" parent="537" name="goal_weight">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>1336</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="656" parent="536" name="profile_id">
+    <column id="658" parent="537" name="profile_id">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>1336</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="657" parent="536" name="goal_type">
+    <column id="659" parent="537" name="goal_type">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StateNumber>1340</StateNumber>
       <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="658" parent="536" name="daily_calories">
+    <column id="660" parent="537" name="daily_calories">
       <Position>10</Position>
       <StateNumber>1340</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="659" parent="536" name="daily_carbohydrates">
+    <column id="661" parent="537" name="daily_carbohydrates">
       <Position>11</Position>
       <StateNumber>1341</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="660" parent="536" name="daily_fats">
+    <column id="662" parent="537" name="daily_fats">
       <Position>12</Position>
       <StateNumber>1341</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="661" parent="536" name="daily_protein">
+    <column id="663" parent="537" name="daily_protein">
       <Position>13</Position>
       <StateNumber>1341</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="662" parent="536" name="created_at">
+    <column id="664" parent="537" name="created_at">
       <NotNull>1</NotNull>
       <Position>14</Position>
       <StateNumber>1343</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
-    <foreign-key id="663" parent="536" name="goal_app_goal_profile_id_8e303953_fk_accounts_profile_user_id">
+    <foreign-key id="665" parent="537" name="goal_app_goal_profile_id_8e303953_fk_accounts_profile_user_id">
       <ColNames>profile_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -9352,7 +9358,7 @@ pg_catalog</CollationParentNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17268</RefTableId>
     </foreign-key>
-    <index id="664" parent="536" name="goal_app_goal_pkey">
+    <index id="666" parent="537" name="goal_app_goal_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17334</ObjectId>
@@ -9361,20 +9367,120 @@ pg_catalog</CollationParentNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="665" parent="536" name="goal_app_goal_profile_id_8e303953">
+    <index id="667" parent="537" name="goal_app_goal_profile_id_8e303953">
       <ColNames>profile_id</ColNames>
       <ObjectId>17349</ObjectId>
       <StateNumber>1342</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="666" parent="536" name="goal_app_goal_pkey">
+    <key id="668" parent="537" name="goal_app_goal_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17335</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1336</StateNumber>
       <UnderlyingIndexId>17334</UnderlyingIndexId>
     </key>
-    <column id="667" parent="537" name="id">
+    <column id="669" parent="538" name="id">
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <SequenceId>17392</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="670" parent="538" name="date">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="671" parent="538" name="total_calories">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="672" parent="538" name="total_protein">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="673" parent="538" name="total_carbs">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="674" parent="538" name="total_sugars">
+      <Position>6</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="675" parent="538" name="total_fats">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="676" parent="538" name="total_fiber">
+      <Position>8</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="677" parent="538" name="total_sodium">
+      <Position>9</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="678" parent="538" name="profile_id">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StateNumber>1399</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="679" parent="538" name="meals_app_dailyconsu_profile_id_4c9b0287_fk_accounts_">
+      <ColNames>profile_id</ColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <ObjectId>17398</ObjectId>
+      <StateNumber>1399</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>17268</RefTableId>
+    </foreign-key>
+    <index id="680" parent="538" name="meals_app_dailyconsumption_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>17396</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1399</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="681" parent="538" name="meals_app_dailyconsumption_profile_id_4c9b0287">
+      <ColNames>profile_id</ColNames>
+      <ObjectId>17403</ObjectId>
+      <StateNumber>1399</StateNumber>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="682" parent="538" name="meals_app_dailyconsumption_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>17397</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1399</StateNumber>
+      <UnderlyingIndexId>17396</UnderlyingIndexId>
+    </key>
+    <column id="683" parent="539" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -9383,94 +9489,94 @@ pg_catalog</CollationParentNames>
       <SequenceId>17364</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="668" parent="537" name="date">
+    <column id="684" parent="539" name="date">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
-    <column id="669" parent="537" name="meal_type">
+    <column id="685" parent="539" name="meal_type">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>varchar(10)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="670" parent="537" name="grams">
+    <column id="686" parent="539" name="grams">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="671" parent="537" name="calories">
+    <column id="687" parent="539" name="calories">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="672" parent="537" name="protein">
+    <column id="688" parent="539" name="protein">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="673" parent="537" name="carbs">
+    <column id="689" parent="539" name="carbs">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="674" parent="537" name="sugars">
+    <column id="690" parent="539" name="sugars">
       <Position>8</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="675" parent="537" name="fats">
+    <column id="691" parent="539" name="fats">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="676" parent="537" name="saturated_fats">
+    <column id="692" parent="539" name="saturated_fats">
       <Position>10</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="677" parent="537" name="fiber">
+    <column id="693" parent="539" name="fiber">
       <Position>11</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="678" parent="537" name="sodium">
+    <column id="694" parent="539" name="sodium">
       <Position>12</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="679" parent="537" name="profile_id">
+    <column id="695" parent="539" name="profile_id">
       <NotNull>1</NotNull>
       <Position>13</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <column id="680" parent="537" name="meal_id">
+    <column id="696" parent="539" name="meal_id">
       <NotNull>1</NotNull>
       <Position>14</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>bigint|0s</StoredType>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="681" parent="537" name="meals_app_dailymeal_profile_id_ff5f576c_fk_accounts_">
+    <foreign-key id="697" parent="539" name="meals_app_dailymeal_profile_id_ff5f576c_fk_accounts_">
       <ColNames>profile_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -9479,7 +9585,7 @@ pg_catalog</CollationParentNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17268</RefTableId>
     </foreign-key>
-    <foreign-key id="682" parent="537" name="meals_app_dailymeal_meal_id_98d51d96_fk_meals_app_meal_id">
+    <foreign-key id="698" parent="539" name="meals_app_dailymeal_meal_id_98d51d96_fk_meals_app_meal_id">
       <ColNames>meal_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -9488,7 +9594,7 @@ pg_catalog</CollationParentNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17357</RefTableId>
     </foreign-key>
-    <index id="683" parent="537" name="meals_app_dailymeal_pkey">
+    <index id="699" parent="539" name="meals_app_dailymeal_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17368</ObjectId>
@@ -9497,26 +9603,26 @@ pg_catalog</CollationParentNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="684" parent="537" name="meals_app_dailymeal_profile_id_ff5f576c">
+    <index id="700" parent="539" name="meals_app_dailymeal_profile_id_ff5f576c">
       <ColNames>profile_id</ColNames>
       <ObjectId>17380</ObjectId>
       <StateNumber>1344</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="685" parent="537" name="meals_app_dailymeal_meal_id_98d51d96">
+    <index id="701" parent="539" name="meals_app_dailymeal_meal_id_98d51d96">
       <ColNames>meal_id</ColNames>
       <ObjectId>17381</ObjectId>
       <StateNumber>1344</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="686" parent="537" name="meals_app_dailymeal_pkey">
+    <key id="702" parent="539" name="meals_app_dailymeal_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17369</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1344</StateNumber>
       <UnderlyingIndexId>17368</UnderlyingIndexId>
     </key>
-    <column id="687" parent="538" name="id">
+    <column id="703" parent="540" name="id">
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -9525,147 +9631,147 @@ pg_catalog</CollationParentNames>
       <SequenceId>17356</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="688" parent="538" name="name">
+    <column id="704" parent="540" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="689" parent="538" name="brand">
+    <column id="705" parent="540" name="brand">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="690" parent="538" name="description">
+    <column id="706" parent="540" name="description">
       <Position>4</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="691" parent="538" name="category">
+    <column id="707" parent="540" name="category">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="692" parent="538" name="calories_per_portion">
+    <column id="708" parent="540" name="calories_per_portion">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="693" parent="538" name="grams_portion">
+    <column id="709" parent="540" name="grams_portion">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="694" parent="538" name="protein_per_portion">
+    <column id="710" parent="540" name="protein_per_portion">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="695" parent="538" name="carbs_per_portion">
+    <column id="711" parent="540" name="carbs_per_portion">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="696" parent="538" name="sugars_per_portion">
+    <column id="712" parent="540" name="sugars_per_portion">
       <Position>10</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="697" parent="538" name="fats_per_portion">
+    <column id="713" parent="540" name="fats_per_portion">
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="698" parent="538" name="saturated_fats_per_portion">
+    <column id="714" parent="540" name="saturated_fats_per_portion">
       <Position>12</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="699" parent="538" name="fiber_per_portion">
+    <column id="715" parent="540" name="fiber_per_portion">
       <Position>13</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="700" parent="538" name="sodium_per_portion">
+    <column id="716" parent="540" name="sodium_per_portion">
       <Position>14</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="701" parent="538" name="calories_per_gram">
+    <column id="717" parent="540" name="calories_per_gram">
       <Position>15</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="702" parent="538" name="protein_per_gram">
+    <column id="718" parent="540" name="protein_per_gram">
       <Position>16</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="703" parent="538" name="carbs_per_gram">
+    <column id="719" parent="540" name="carbs_per_gram">
       <Position>17</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="704" parent="538" name="sugars_per_gram">
+    <column id="720" parent="540" name="sugars_per_gram">
       <Position>18</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="705" parent="538" name="fats_per_gram">
+    <column id="721" parent="540" name="fats_per_gram">
       <Position>19</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="706" parent="538" name="saturated_fats_per_gram">
+    <column id="722" parent="540" name="saturated_fats_per_gram">
       <Position>20</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="707" parent="538" name="fiber_per_gram">
+    <column id="723" parent="540" name="fiber_per_gram">
       <Position>21</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="708" parent="538" name="sodium_per_gram">
+    <column id="724" parent="540" name="sodium_per_gram">
       <Position>22</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>double precision|0s</StoredType>
       <TypeId>701</TypeId>
     </column>
-    <column id="709" parent="538" name="meal_picture">
+    <column id="725" parent="540" name="meal_picture">
       <Position>23</Position>
       <StateNumber>1344</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="710" parent="538" name="meals_app_meal_pkey">
+    <index id="726" parent="540" name="meals_app_meal_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17362</ObjectId>
@@ -9674,7 +9780,7 @@ pg_catalog</CollationParentNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="711" parent="538" name="meals_app_meal_pkey">
+    <key id="727" parent="540" name="meals_app_meal_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17363</ObjectId>
       <Primary>1</Primary>

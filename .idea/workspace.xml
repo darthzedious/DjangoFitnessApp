@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7175677f-cbe6-4c5c-9f06-7baf31cbcdce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/meals/category_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DjangoFitnessApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoFitnessApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee/storage_v2/_src_/database/fitness_app_django.8JWUYw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee/storage_v2/_src_/database/fitness_app_django.8JWUYw/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/choices.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/models/meal.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/models/meal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/diet_plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meals/diet_plan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/meal_details.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -178,7 +170,7 @@
       <updated>1742906318070</updated>
       <workItem from="1742906319087" duration="17486000" />
       <workItem from="1742987569152" duration="66991000" />
-      <workItem from="1743537668736" duration="12657000" />
+      <workItem from="1743537668736" duration="23048000" />
     </task>
     <servers />
   </component>
