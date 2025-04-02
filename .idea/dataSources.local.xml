@@ -14,7 +14,9 @@
             <node kind="database" qname="@">
               <node kind="schema" qname="@" />
             </node>
-            <node kind="database" qname="django_fitness_app">
+            <node kind="database">
+              <name qname="fitness_app_django" />
+              <name qname="django_fitness_app" />
               <node kind="schema" qname="public" />
             </node>
           </node>

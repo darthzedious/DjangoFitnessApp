@@ -5,23 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7175677f-cbe6-4c5c-9f06-7baf31cbcdce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/meals/category_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DjangoFitnessApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoFitnessApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee/storage_v2/_src_/database/django_fitness_app.ZmRtag/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee/storage_v2/_src_/database/django_fitness_app.ZmRtag/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee/storage_v2/_src_/database/fitness_app_django.8JWUYw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdafdcb-89a8-41b1-9a66-2362c731e3ee/storage_v2/_src_/database/fitness_app_django.8JWUYw/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home_templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home_templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_templates/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/authentication.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/authentication.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/choices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/models/meal.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/models/meal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/meals/diet_plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meals/diet_plan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/meals/meal_details.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,32 +63,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.DjangoFitnessApp.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.nav.html.executor&quot;: &quot;Run&quot;,
-    &quot;Python.t.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.DjangoFitnessApp.executor": "Run",
+    "JavaScript Debug.home.html.executor": "Run",
+    "JavaScript Debug.nav.html.executor": "Run",
+    "Python.t.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/angelbobotsov/Documents/GitHub/DjangoFitnessApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.project",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/DjangoFitnessApp" />
@@ -171,6 +178,7 @@
       <updated>1742906318070</updated>
       <workItem from="1742906319087" duration="17486000" />
       <workItem from="1742987569152" duration="66991000" />
+      <workItem from="1743537668736" duration="12657000" />
     </task>
     <servers />
   </component>

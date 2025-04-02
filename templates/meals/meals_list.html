@@ -1,0 +1,15 @@
+{% extends 'home_templates/home.html' %}
+
+{% block content %}
+    <h2>Meals in Category: {{ category }}</h2>
+
+    {% if meals %}
+        <ul>
+            {% for meal in meals %}
+                <li>{{ meal.name }} - {{ meal.description }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No meals found for this category.</p>
+    {% endif %}
+{% endblock %}

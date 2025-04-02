@@ -33,7 +33,7 @@ class Meal(models.Model):
 
     grams_portion = models.FloatField(
         validators=[
-            MinValueValidator(0.0),
+            MinValueValidator(1),
         ],
     )
 
@@ -127,23 +127,6 @@ class Meal(models.Model):
         blank=True,
         null=True,
     )
-
-    #
-    # def save(self, *args, **kwargs):
-    #     try:
-    #         self.calories_per_gram = self.calories_per_portion / self.grams_portion
-    #         self.protein_per_gram = self.protein_per_portion / self.grams_portion
-    #         self.carbs_per_gram = self.carbs_per_portion / self.grams_portion
-    #         self.fats_per_gram = self.fats_per_portion / self.grams_portion
-    #         self.fiber_per_gram = (self.fiber_per_portion / self.grams_portion) if self.fiber_per_portion else 0
-    #         self.sodium_per_gram = (self.sodium_per_portion / self.grams_portion) if self.sodium_per_portion else 0
-    #
-    #     except ZeroDivisionError:
-    #         self.calories_per_gram = self.protein_per_gram = self.carbs_per_gram = self.fats_per_gram = 0
-    #         self.fiber_per_gram = self.sodium_per_gram = 0
-    #
-    #     super().save(*args, **kwargs)
-
 
     def __str__(self):
         return self.name

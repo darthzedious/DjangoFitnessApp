@@ -6,10 +6,12 @@ class MealForm(forms.ModelForm):
         model = Meal
         fields = [
             'name', 'brand', 'description', 'category',
-            'calories_per_portion', 'protein_per_portion',
-            "grams_portion", 'carbs_per_portion',
-            'sugars_per_portion', 'fats_per_portion',
+            'calories_per_portion', "grams_portion",
+            'fats_per_portion',
             'saturated_fats_per_portion',
+            'carbs_per_portion',
+            'sugars_per_portion',
+            'protein_per_portion',
             'fiber_per_portion',
             'sodium_per_portion',
             'meal_picture',
