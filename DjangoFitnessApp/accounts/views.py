@@ -48,21 +48,6 @@ class LoadProfileView(LoginRequiredMixin, DetailView):
     model = UserModel
     template_name = 'registration/profile.html'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #
-    #     goal = self.object.profile.goal
-    #     if goal:
-    #         bmr = calculate_bmr(goal.gender, goal.weight, goal.height, goal.age)
-    #         amr = calculate_amr(bmr, goal.activity)
-    #         daily_calories = calculate_goal_calories(amr, goal.goal_type)
-    #
-    #         context["bmr"] = round(bmr, 2)
-    #         context["amr"] = round(amr, 2)
-    #         context["daily_calories"] = round(daily_calories, 2)
-    #
-    #     return context
-
 
 class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Profile

@@ -1,0 +1,63 @@
+{% extends 'home_templates/home.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Daily Meal History</h2>
+
+
+{% if history_data %}
+    {% for date, data in history_data.items %}
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">{{ date }}</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Total Calories:</strong> {{ data.total_calories|floatformat:0 }} kcal</p>
+                <p><strong>Protein:</strong> {{ data.total_protein|floatformat:0 }} g</p>
+                <p><strong>Carbs:</strong> {{ data.total_carbs|floatformat:0 }} g</p>
+                <p><strong>Fats:</strong> {{ data.total_fats|floatformat:0 }} g</p>
+                <p><strong>Fiber:</strong> {{ data.total_fiber|floatformat:0 }} g</p>
+                <p><strong>Sodium:</strong> {{ data.total_sodium|floatformat:0 }} mg</p>
+
+                <h6 class="mt-3">Meals:</h6>
+                <ul class="list-group">
+                    {% for meal in data.meals %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>{{ meal.name }}</strong> - {{ meal.grams }}g
+                                <br>
+                                <strong>{{ meal.meal_type }}</strong>
+                                <br>
+                                Calories: {{ meal.calories|floatformat:0 }} kcal
+                                <br>
+                                Protein: {{ meal.protein|floatformat:0 }} g
+                                <br>
+                                Carbs: {{ meal.carbs|floatformat:0 }} g
+                                <br>
+                                Fats: {{ meal.fats|floatformat:0 }} g
+                            </div>
+{#                            {% if meal.id %}#}
+                                <form method="POST" action="{% url 'copy_meal' meal.id %}" class="ml-2">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-secondary btn-sm">Copy Meal</button>
+                                </form>
+{#                            {% endif %}#}
+                        </li>
+                    {% empty %}
+                        <li class="list-group-item text-muted">No meals recorded for this day.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    {% endfor %}
+        <div class="text-center">
+                {% include 'home_templates/pagination.html' %}
+        </div>
+{% else %}
+<p class="text-muted text-center">No meal history found.</p>
+{% endif %}
+
+
+</div>
+{% endblock %}

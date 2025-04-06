@@ -1,0 +1,45 @@
+{% extends 'home_templates/home.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2 class="mb-4">Meals in Category: <strong>{{ category }}</strong></h2>
+
+        <form method="GET" action="" class="mb-4">
+            <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Search by meal name or brand" value="{{ request.GET.search }}">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+
+        {% if meals %}
+            <div class="row">
+                {% for meal in meals %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            {% if meal.meal_picture %}
+                                <img src="{{ meal.meal_picture.url }}" class="card-img-top" alt="{{ meal.name }} Image" style="height: 200px; object-fit: cover;">
+                            {% else %}
+                                <img src="{% static 'default_image.jpg' %}" class="card-img-top" alt="Default Meal Image" style="height: 200px; object-fit: cover;">
+                            {% endif %}
+                            <div class="card-body">
+                                <h4 class="card-title">{{ meal.name }}</h4>
+                                <p class="card-text"><strong>Brand: {{ meal.brand }}</strong></p>
+                                <p class="card-text">{{ meal.description }}</p>
+                                <a href="{% url 'meal-details' meal.pk %}" class="btn btn-secondary btn-block">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="text-center">
+                {% include 'home_templates/pagination.html' %}
+            </div>
+        {% else %}
+            <p class="text-muted">No meals found.</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

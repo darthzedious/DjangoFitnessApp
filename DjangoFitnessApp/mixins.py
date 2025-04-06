@@ -9,12 +9,12 @@ class PlaceholderMixin:
             field.widget.attrs['placeholder'] = placeholder
 
 
-class DisabledReadonlyMixin:
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.disable_readonly()
-
-    def disable_readonly(self):
-        for field in self.fields.values(): # ('name': object_field)
-            field.widget.attrs['disabled'] = True
-            field.widget.attrs['readonly'] = True
+# class DisabledReadonlyMixin:
+#     def __init__(self, *args, **kwargs):
+#         super().__init__(*args, **kwargs)
+#         self.disable_readonly()
+#
+#     def disable_readonly(self):
+#         for field in self.fields.values(): # ('name': object_field)
+#             field.widget.attrs['disabled'] = True
+#             field.widget.attrs['readonly'] = True

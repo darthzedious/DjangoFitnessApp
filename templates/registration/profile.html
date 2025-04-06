@@ -9,7 +9,6 @@
                     <a href="{% url 'diet-tracker' %}" class="btn btn-success">
                         Diet Tracker
                     </a>
-{#                {% if object.profile.goal.exists %}#}
                     <a href="{% url 'goal-detail' object.profile.goal.last.pk %}" class="btn btn-success">
                         View Goal
                     </a>
@@ -34,7 +33,7 @@
 
                     <div class="col-md-8">
                         <h4 class="text-primary">{{ object.profile.get_full_name }}</h4>
-                        <p><strong>Email:</strong> {{ object.profile.user.email }}</p>
+{#                        <p><strong>Email:</strong> {{ object.profile.user.email }}</p>#}
                         <p><strong>Date of Birth:</strong>
                             {% if object.profile.date_of_birth %}
                                 {{ object.profile.date_of_birth }}
@@ -44,7 +43,7 @@
                         </p>
                         <p><strong>Activity Level:</strong> {{ object.profile.goal.last.get_activity_display }}</p>
                         <p><strong>Goal Type:</strong> {{ object.profile.goal.last.get_goal_type_display }}</p>
-                        <p><strong>Calories per day:</strong> {{ object.profile.goal.last.daily_calories }}</p>
+                        <p><strong>Calories for today:</strong> {{ object.profile.daily_consumptions.last.total_calories|floatformat:0 }} / {{ object.profile.goal.last.daily_calories }}</p>
                     </div>
                 </div>
             </div>

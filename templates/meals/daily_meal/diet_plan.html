@@ -1,0 +1,46 @@
+{% extends 'home_templates/home.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Diet Tracker</h3>
+        </div>
+
+        <div class="card-body">
+            <p><strong>Daily Calories Goal:</strong> {{ daily_calories }} kcal</p>
+            <p><strong>Calories Consumed:</strong> {{ consumed_calories|floatformat:0 }} kcal</p>
+            <p><strong>Remaining Calories:</strong> {{ remaining_calories|floatformat:0 }} kcal</p>
+            <p><strong>Protein:</strong> {{ daily_consumption.total_protein|floatformat:0 }}g / {{ goal.daily_protein|default:0 }}g</p>
+            <p><strong>Carbs:</strong> {{ daily_consumption.total_carbs|floatformat:0 }}g / {{ goal.daily_carbohydrates|default:0 }}g</p>
+            <p><strong>Fats:</strong> {{ daily_consumption.total_fats|floatformat:0}}g / {{ goal.daily_fats|default:0 }}g</p>
+
+            <!-- Loop through meal types -->
+            {% for meal_type, label in meal_types.items %}
+                <div class="mt-4">
+                    <h4 class="text-primary">{{ label }}</h4>
+                    <a href="{% url 'category-list' %}" class="btn btn-success btn-sm mb-2">+ Add Meal</a>
+                    <ul class="list-group">
+                        {% for meal in object_list %}
+                            {% if meal.meal_type == meal_type %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    {{ meal.meal.name }} - {{ meal.grams }}g - {{ meal.calories|floatformat:0 }} kcal - {{ meal.carbs|floatformat:0 }}g carbs - {{ meal.protein|floatformat:0 }}g protein - {{ meal.fats|floatformat:0 }}g fat
+                                    <a href="{% url 'delete-meal' meal.pk %}" class="btn btn-danger btn-sm">Delete</a>
+                                </li>
+                            {% endif %}
+                        {% empty %}
+                            <li class="list-group-item">No meals added yet.</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+
+            <div class="mt-4">
+                <a href="{% url 'create-new-meal' %}" class="btn btn-secondary">Create New Meal</a>
+                <a href="{% url 'category-list' %}" class="btn btn-secondary">View All Meals</a>
+                <a href="{% url 'daily-meal-history' %}" class="btn btn-secondary">Daily Meal History</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

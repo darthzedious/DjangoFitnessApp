@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator
 from django.db import models
 
 from DjangoFitnessApp.accounts.models import Profile
@@ -13,11 +14,17 @@ class Goal(models.Model):
         related_name="goal",
     )
 
-    weight = models.FloatField()
+    weight = models.FloatField(
+        validators=[MinValueValidator(1)],
+    )
 
-    height = models.FloatField()
+    height = models.FloatField(
+        validators=[MinValueValidator(1)],
+    )
 
-    age = models.PositiveIntegerField()
+    age = models.PositiveIntegerField(
+        validators=[MinValueValidator(1)],
+    )
 
     gender = models.CharField(
         max_length=10,
@@ -35,7 +42,9 @@ class Goal(models.Model):
     )
 
 
-    goal_weight = models.FloatField()
+    goal_weight = models.FloatField(
+        validators=[MinValueValidator(2)],
+    )
 
     goal_type = models.CharField(
         max_length=20,

@@ -1,0 +1,20 @@
+{% extends 'home_templates/home.html' %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="row">
+            {% for category, label in categories.items %}
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ category }}</h5>
+                            <p class="card-text">Click below to view all meals in this category.</p>
+                            <a href="{% url 'meals-list' category=category %}" class="btn btn-primary btn-block">Show meals</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

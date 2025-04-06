@@ -20,6 +20,7 @@ def calculate_amr(bmr: float, activity_level: str) -> float:
     }
     return bmr * activity_multiplier.get(activity_level, 1.2)
 
+
 def calculate_goal_calories(amr: float, goal_type: str) -> int:
     """Calculate the daily calorie intake based on the goal the user has."""
     goal_adjustments = {

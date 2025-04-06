@@ -1,0 +1,67 @@
+{% extends 'home_templates/home.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h3>{{ meal.name }}</h3>
+            </div>
+            <div class="card-body">
+                {% if meal.meal_picture %}
+                    <img src="{{ meal.meal_picture.url }}" class="card-img-top mb-4" alt="{{ meal.name }} Image" style="height: 250px; width: auto; object-fit: contain; border-radius: 10px;">
+                {% else %}
+                    <img src="{% static 'default_image.jpg' %}" class="card-img-top mb-4" alt="Default Meal Image" style="height: 250px; width: auto; object-fit: contain; border-radius: 10px;">
+                {% endif %}
+
+                <!-- Meal Details and Portion Information -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+
+                        <!-- Meal Details -->
+                        <div class="col-md-6">
+                            <h5><strong>Meal Details:</strong></h5>
+                            <p><strong>Brand:</strong> {{ meal.brand }}</p>
+                            <p><strong>Description:</strong> {{ meal.description }}</p>
+                            <p><strong>Category:</strong> {{ meal.category }}</p>
+                        </div>
+
+                        <!-- Portion Information -->
+                        <div class="col-md-6">
+                            <h5><strong>Portion Information:</strong></h5>
+                            <p><strong>Calories per Portion:</strong> {{ meal.calories_per_portion }} kcal</p>
+                            <p><strong>Grams per Portion:</strong> {{ meal.grams_portion }} g</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+                    <!-- Nutritional Information -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h5><strong>Nutritional Information:</strong></h5>
+                            <p><strong>Carbs per Portion:</strong> {{ meal.carbs_per_portion }} g</p>
+                            <p><strong>Sugars per Portion:</strong> {{ meal.sugars_per_portion|default:"N/A" }} g</p>
+                            <p><strong>Protein per Portion:</strong> {{ meal.protein_per_portion }} g</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Fats per Portion:</strong> {{ meal.fats_per_portion }} g</p>
+                            <p><strong>Saturated Fats per Portion:</strong> {{ meal.saturated_fats_per_portion|default:"N/A" }} g</p>
+                            <p><strong>Fiber per Portion:</strong> {{ meal.fiber_per_portion|default:"N/A" }} g</p>
+                            <p><strong>Sodium per Portion:</strong> {{ meal.sodium_per_portion|default:"N/A" }} mg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+            <div class="card-footer text-right">
+                <a href="{% url 'add-meal' %}?meal_id={{ meal.id }}" class="btn btn-success btn-sm mb-2">+ Add Meal</a>
+            </div>
+        </div>
+
+{% endblock %}

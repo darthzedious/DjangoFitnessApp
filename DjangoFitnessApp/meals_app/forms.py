@@ -17,31 +17,14 @@ class MealForm(forms.ModelForm):
             'meal_picture',
         ]
 
+
 class DailyMealForm(forms.ModelForm):
     class Meta:
         model = DailyMeal
-        fields = [
-            'meal',
-            'meal_type',
-            'grams',
-        ]
+        fields = ['meal', 'meal_type', 'grams']
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
-class DailyMealDeleteForm(forms.ModelForm):
-    # Define fields to display consumption data (readonly)
-    total_calories = forms.FloatField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
-    total_protein = forms.FloatField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
-    total_carbs = forms.FloatField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
-    total_fats = forms.FloatField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
-
-    class Meta:
-        model = DailyMeal
-        fields = []
-#
-# class MealSearchForm(forms.Form):
-#     query = forms.CharField(
-#         max_length=100,
-#         required=False,
-#         label="Search Meal"
-#     )
-
+        if self.initial.get('meal'):
+            self.fields['meal'].widget.attrs['readonly'] = True

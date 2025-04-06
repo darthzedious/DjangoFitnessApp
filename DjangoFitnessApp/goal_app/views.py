@@ -43,6 +43,7 @@ class GoalUpdateView(LoginRequiredMixin, UpdateView):
 
 
 class GoalDetailView(LoginRequiredMixin, DetailView):
+    """Loads the most recent goal added. Set and accessible in profile template."""
     model = Goal
     template_name = "goal/goal_details.html"
 
