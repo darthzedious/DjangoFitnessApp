@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7175677f-cbe6-4c5c-9f06-7baf31cbcdce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/meals/daily_meal/add_dailymeal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/meals/daily_meal/diet_plan.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/meals/meal/category_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/meals/meal/meals_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/goal_app/calculations.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/goal_app/calculations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/goal_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/goal_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/goal_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/goal_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/managers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/home_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/home_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/meals_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/mixins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/goal/goal_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/goal/goal_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home_templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_templates/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/add_meal.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/category_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/create_new_meal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meals/meal/create_new_meal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/delete_meal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meals/daily_meal/delete_dailymeal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/diet_plan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/meals_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/meals/meal/create_new_meal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meals/meal/create_new_meal.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +175,7 @@
       <updated>1742906318070</updated>
       <workItem from="1742906319087" duration="17486000" />
       <workItem from="1742987569152" duration="66991000" />
-      <workItem from="1743537668736" duration="99973000" />
+      <workItem from="1743537668736" duration="115276000" />
     </task>
     <servers />
   </component>

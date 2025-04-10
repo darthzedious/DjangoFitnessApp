@@ -7,6 +7,7 @@ from DjangoFitnessApp.mixins import PlaceholderMixin
 
 UserModel = get_user_model()
 
+
 class LoginForm(PlaceholderMixin, AuthenticationForm):
     username = forms.CharField(
         label="Username or Email",
@@ -24,13 +25,15 @@ class LoginForm(PlaceholderMixin, AuthenticationForm):
         })
     )
 
+
 class RegisterForm(PlaceholderMixin, UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = UserModel
         fields = ['username','email']
 
+
 class ProfileEditForm(forms.ModelForm):
-    profile_picture = forms.ImageField(required=False)
+    # profile_picture = forms.ImageField(required=False)
 
     class Meta:
         model = Profile

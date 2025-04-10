@@ -75,6 +75,7 @@ class MealCreateView(LoginRequiredMixin, CreateView):
 
         form.instance.fiber_per_gram = (form.instance.fiber_per_portion or 0) / form.instance.grams_portion
         form.instance.sodium_per_gram = (form.instance.sodium_per_portion or 0) / form.instance.grams_portion
+        form.instance.meal_picture = self.request.FILES.get('meal_picture', form.instance.meal_picture)
 
 
         return super().form_valid(form)
