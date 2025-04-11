@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 
 from DjangoFitnessApp.accounts.models import Profile
 from DjangoFitnessApp.mixins import PlaceholderMixin
@@ -43,3 +43,10 @@ class ProfileEditForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
+
+
+class AppUserChangeForm(PlaceholderMixin, UserChangeForm):
+    """Used in the admin functionality."""
+    class Meta(UserChangeForm.Meta):
+        model = UserModel
+        fields = '__all__'
