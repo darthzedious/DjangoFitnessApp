@@ -5,6 +5,9 @@
         <div class="card shadow-lg">
             <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                 <h3 class="mb-0">Profile Details</h3>
+                <a href="{% url 'trainings' %}" class="btn btn-success">
+                    Training
+                </a>
                 {% if object.profile.goal.exists %}
                     <a href="{% url 'diet-tracker' %}" class="btn btn-success">
                         Diet Tracker

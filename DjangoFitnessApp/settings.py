@@ -35,6 +35,7 @@ MY_APPS = [
     'DjangoFitnessApp.home_app',
     'DjangoFitnessApp.goal_app',
     'DjangoFitnessApp.meals_app',
+    'DjangoFitnessApp.trainings_app',
 ]
 
 INSTALLED_APPS = [

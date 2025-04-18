@@ -25,5 +25,6 @@ urlpatterns = [
     path('accounts/', include('DjangoFitnessApp.accounts.urls')),
     path('goals/', include('DjangoFitnessApp.goal_app.urls')),
     path('meals/', include('DjangoFitnessApp.meals_app.urls')),
+    path('trainings/', include('DjangoFitnessApp.trainings_app.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
