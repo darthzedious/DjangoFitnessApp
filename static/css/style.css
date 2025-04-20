@@ -34,7 +34,7 @@
             border-radius: 5px;
         }
         .cta-buttons .btn-primary {
-            background-color: #ff5722;
+            background-color: darkblue;
             border: none;
         }
         .cta-buttons .btn-outline-light {
@@ -81,8 +81,8 @@
 }
 
 .pagination .active .page-link {
-    background-color: #ff5722;
-    border-color: #ff5722;
+    background-color: darkblue;
+    border-color: darkblue;
     font-weight: bold;
     cursor: default;
 }

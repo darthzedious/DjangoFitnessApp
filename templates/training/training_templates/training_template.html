@@ -1,0 +1,42 @@
+{% extends 'home_templates/home.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Your Training Sessions</h2>
+
+    {% if trainings %}
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            {% for training in trainings %}
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ training.get_workout_type_display }}</h5>
+                            <p class="card-text">
+                                <strong>Date:</strong> {{ training.date }}<br>
+                                <strong>Gym:</strong> {{ training.gym }}<br>
+                                <strong>Duration:</strong> {{ training.training_duration_minutes }} minutes
+                            </p>
+                            <a href="{% url 'training_details' training.pk %}" class="btn btn-outline-primary">Workout Details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-warning mt-3">
+            No training sessions found. Start by creating one!
+        </div>
+    {% endif %}
+
+    <div class="card mt-5">
+        <div class="card-body text-center">
+            <a href="{% url 'training_create' %}" class="btn btn-success me-2">+ Create Workout</a>
+            <a href="{% url 'exercise_create' %}" class="btn btn-info me-2">+ Create Exercise</a>
+            <a href="{% url 'exercise_list' %}" class="btn btn-secondary">View All Exercises</a>
+        </div>
+    </div>
+            <div class="text-center">
+                {% include 'home_templates/pagination.html' %}
+            </div>
+</div>
+{% endblock %}

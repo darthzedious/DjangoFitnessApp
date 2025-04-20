@@ -1,0 +1,18 @@
+{% extends 'home_templates/home.html' %}
+
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{{ exercise.name }}</h2>
+
+    {% if exercise.exercise_picture %}
+        <img src="{{ exercise.exercise_picture.url }}" alt="{{ exercise.name }}" class="img-fluid rounded mb-3">
+    {% endif %}
+
+    <p><strong>Brand:</strong> {{ exercise.equipment_brand|default:"N/A" }}</p>
+    <p><strong>Type:</strong> {{ exercise.get_exercise_type_display }}</p>
+    <p><strong>Description:</strong> {{ exercise.description|default:"No description provided." }}</p>
+
+    <a href="{% url 'exercise_list' %}" class="btn btn-secondary mt-3">← Back to Exercises</a>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'home_templates/home.html' %}
+
+
+{% block content %}
+        <div class="container mt-4">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Create Exercise</h3>
+            </div>
+
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data" class="form-group mb-4">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-success">Save Exercise</button>
+                </form>
+            </div>
+
+            <div class="card-footer text-right">
+                <a href="{% url 'trainings' %}" class="btn btn-secondary">Back to all Workouts</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

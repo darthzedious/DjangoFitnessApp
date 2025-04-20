@@ -1,0 +1,77 @@
+{% extends 'home_templates/home.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>All Exercises</h2>
+
+     <form method="GET" action="" class="mb-4">
+            <div class="input-group">
+                <input type="text" class="form-control" name="search" placeholder="Search by name, brand or type." value="{{ request.GET.search }}">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+
+
+<!-- Filter by Type -->
+<div class="mb-4">
+    <div class="btn-group" role="group" aria-label="Filter by type">
+        <a href="{% url 'exercise_list' %}" class="btn btn-outline-primary {% if not selected_type %}active{% endif %}">All</a>
+{#        {% for value, label in all_types %}#}
+{#            <a href="?type={{ value }}" class="btn btn-outline-primary {% if selected_type == value %}active{% endif %}">#}
+{#                {{ label }}#}
+{#            </a>#}
+{#        {% endfor %}#}
+    {% for value, label in all_types %}
+    <a href="?type={{ value }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}"
+       class="btn btn-outline-primary {% if selected_type == value %}active{% endif %}">
+        {{ label }}
+    </a>
+{% endfor %}
+    </div>
+</div>
+
+
+    {% if exercises %}
+        <div class="row">
+            {% for exercise in exercises %}
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        {% if exercise.exercise_picture %}
+                            <img src="{{ exercise.exercise_picture.url }}" class="card-img-top" alt="{{ exercise.name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ exercise.name }}</h5>
+                            <p class="card-text">{{ exercise.description|default:"No description."|truncatechars:100 }}</p>
+                            <a href="{% url 'exercise_details' exercise.pk %}" class="btn btn-primary">Details</a>
+                                {% if session_pk %}
+                                <a class="btn btn-success"
+                                    href="{% url 'training_exercise_create_with_exercise' session_pk exercise.pk %}">
+                                        ➕ Add to training
+                                </a>
+                                {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'exercise_create' %}" class="btn btn-success mb-3">+ Add Exercise</a>
+
+        {% if session_pk %}
+            <a href="{% url 'training_details' session_pk %}" class="btn btn-secondary mb-3">
+                ← Back to Training Session
+            </a>
+        {% endif %}
+
+            <div class="text-center">
+                {% include 'home_templates/pagination.html' %}
+            </div>
+
+    {% else %}
+        <p>No exercises found. Add some using the button below.</p>
+        <a href="{% url 'exercise_create' %}" class="btn btn-success mb-3">+ Add Exercise</a>
+    {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'home_templates/home.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Add Sets to {{ training_session.day }} - {{ training_session.workout_type }}</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="btn btn-primary">Add Exercise</button>
+        <a href="{% url 'training_details' training_session.pk %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
