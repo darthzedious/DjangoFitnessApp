@@ -1,8 +1,9 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, DetailView, UpdateView
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView, FormView
 
-from DjangoFitnessApp.trainings_app.forms import TrainingSessionForm
+from DjangoFitnessApp.trainings_app.forms import TrainingSessionForm, TrainingSessionDeleteForm
 from DjangoFitnessApp.trainings_app.models import TrainingSession
 
 
@@ -57,3 +58,26 @@ class TrainingUpdateView(LoginRequiredMixin, UpdateView):
 
 
 #TODO create TrainingDeleteView
+
+class TrainingDeleteView(LoginRequiredMixin, FormView, DeleteView):
+    form_class = TrainingSessionDeleteForm
+    template_name = "training/training_templates/training_delete_template.html"
+    model = TrainingSession
+    success_url = reverse_lazy('trainings')
+
+    def get_form_kwargs(self):
+        """Prefills the form with data."""
+        kwargs = super().get_form_kwargs()
+        workout = get_object_or_404(TrainingSession, pk=self.kwargs['pk'])
+        kwargs['instance'] = workout
+        return kwargs
+
+    def get_context_data(self, **kwargs):
+        """Update context data sent to the template."""
+        context = super().get_context_data(**kwargs)
+        context['training_session'] = get_object_or_404(
+            TrainingSession,
+            pk=self.object.pk,
+        )
+        return context
+    

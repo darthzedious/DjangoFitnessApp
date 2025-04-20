@@ -1,5 +1,6 @@
 from django import forms
 
+from DjangoFitnessApp.mixins import DisabledReadonlyMixin
 from DjangoFitnessApp.trainings_app.models import Exercise, TrainingSession, TrainingExercise, SetLog
 
 
@@ -19,6 +20,10 @@ class TrainingSessionForm(forms.ModelForm):
         }
 
 
+class TrainingSessionDeleteForm(DisabledReadonlyMixin, TrainingSessionForm):
+    pass
+
+
 class TrainingExerciseForm(forms.ModelForm):
     class Meta:
         model = TrainingExercise
@@ -30,7 +35,16 @@ class TrainingExerciseForm(forms.ModelForm):
             self.fields['exercise'].disabled = True
 
 
+class TrainingExerciseDeleteForm(DisabledReadonlyMixin, TrainingExerciseForm):
+    pass
+
+
 class SetLogForm(forms.ModelForm):
     class Meta:
         model = SetLog
         exclude = ('training_exercise',)
+
+
+class SetLogDeleteForm(DisabledReadonlyMixin, SetLogForm):
+    pass
+

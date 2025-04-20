@@ -7,6 +7,7 @@ urlpatterns = [
     path("create-new-workout/", views.TrainingCreateView.as_view(), name="training_create"),
     path("workout-details/<int:pk>/", views.TrainingDetailsView.as_view(), name="training_details"),
     path("workout-edit/<int:pk>/", views.TrainingUpdateView.as_view(), name="training_edit"),
+    path("training/<int:pk>/delete/", views.TrainingDeleteView.as_view(), name="training_delete"),
 
     path("exercise-create/", views.ExerciseCreateView.as_view(), name="exercise_create"),
 
@@ -27,14 +28,14 @@ urlpatterns = [
         name="training_exercise_create_with_exercise"
     ),
 
-    path('training-exercise-edit/<int:pk>/', views.TrainingExerciseUpdateView.as_view(), name="training_exercise_edit"),
+    path('training-exercise/<int:pk>/edit/', views.TrainingExerciseUpdateView.as_view(), name="training_exercise_edit"),
+    path('training-exercise/<int:pk>/delete/', views.TrainingExerciseDeleteView.as_view(), name="training_exercise_delete"),
 
     path(
         'training/<int:training_session_pk>/exercise/<int:training_exercise_pk>/set/add/',
         views.SetLogCreateView.as_view(),
         name='setlog_create'
     ),
-
     path('set/<int:pk>/edit/', views.SetlogUpdateView.as_view(), name="setlog_update"),
     path('set/<int:pk>/delete/', views.SetLogDeleteView.as_view(), name="setlog_delete"),
 

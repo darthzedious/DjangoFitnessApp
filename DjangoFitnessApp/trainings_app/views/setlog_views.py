@@ -1,10 +1,9 @@
-#TODO create SetLogCreateView, SetLogUpdateView, SetLogDeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView, DeleteView, FormView
 
-from DjangoFitnessApp.trainings_app.forms import SetLogForm
+from DjangoFitnessApp.trainings_app.forms import SetLogForm, SetLogDeleteForm
 from DjangoFitnessApp.trainings_app.models import SetLog, TrainingExercise, TrainingSession
 
 
@@ -45,7 +44,7 @@ class SetLogCreateView(LoginRequiredMixin, CreateView):
 
 class SetlogUpdateView(LoginRequiredMixin, UpdateView):
     form_class = SetLogForm
-    template_name = 'training/setlog_templates/setlog_create_template.html'
+    template_name = 'training/setlog_templates/setlog_edit_template.html'
     model = SetLog
 
     def get_success_url(self):
@@ -58,17 +57,27 @@ class SetlogUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         context['training_session'] = get_object_or_404(
             TrainingSession,
             pk=self.object.training_exercise.training_session.pk,
         )
+
         return context
 
 
-class SetLogDeleteView(LoginRequiredMixin, DeleteView):
+class SetLogDeleteView(LoginRequiredMixin, FormView, DeleteView):
     model = SetLog
-    form_class = SetLogForm
-    template_name = 'training/setlog_templates/setlog_create_template.html'
+    form_class = SetLogDeleteForm
+    template_name = 'training/setlog_templates/setlog_delete_template.html'
+
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        set = get_object_or_404(SetLog, pk=self.kwargs['pk'])
+        kwargs['instance'] = set
+
+        return kwargs
 
     def get_success_url(self):
         return reverse_lazy(
@@ -80,8 +89,10 @@ class SetLogDeleteView(LoginRequiredMixin, DeleteView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         context['training_session'] = get_object_or_404(
             TrainingSession,
             pk=self.object.training_exercise.training_session.pk,
         )
+
         return context

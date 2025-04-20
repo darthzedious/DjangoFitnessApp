@@ -28,7 +28,8 @@
                     <small class="text-muted">({{ exercise.exercise.get_exercise_type_display|title }})</small>
                 </div>
                 <div>
-                    <a href="{% url 'training_exercise_edit' exercise.pk %}" class="btn btn-outline-primary btn-sm me-1">✏️ Edit</a>
+                    <a href="{% url 'training_exercise_edit' exercise.pk %}" class="btn btn-outline-primary btn-sm me-1">✏️ Edit Exercise</a>
+                    <a href="{% url 'training_exercise_delete' exercise.pk %}" class="btn btn-sm btn-danger">Delete</a>
                     <a href="{% url 'setlog_create' training.pk exercise.pk %}" class="btn btn-success btn-sm">➕ Add Set</a>
                 </div>
             </div>
@@ -85,9 +86,9 @@
     <div class="card mt-5 shadow-sm">
         <div class="card-body text-center">
             <a href="{% url 'training_edit' training.pk %}" class="btn btn-success me-2">🛠 Edit Training</a>
-            {% if training.training_exercise.exists %}
-                <a href="{% url 'exercise_list' %}" class="btn btn-secondary">📋 Edit Exercises</a>
-            {% endif %}
+{#            {% if training.training_exercise.exists %}#}
+{#                <a href="{% url 'exercise_list' %}" class="btn btn-secondary">📋 Edit Exercises</a>#}
+{#            {% endif %}#}
         </div>
     </div>
 </div>

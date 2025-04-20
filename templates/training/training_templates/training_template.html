@@ -17,6 +17,7 @@
                                 <strong>Duration:</strong> {{ training.training_duration_minutes }} minutes
                             </p>
                             <a href="{% url 'training_details' training.pk %}" class="btn btn-outline-primary">Workout Details</a>
+                            <a href="{% url 'training_delete' training.pk %}" class="btn btn-sm btn-danger">Delete Details</a>
                         </div>
                     </div>
                 </div>
