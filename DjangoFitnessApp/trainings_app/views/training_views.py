@@ -34,6 +34,11 @@ class TrainingCreateView(LoginRequiredMixin, CreateView):
             }
         )
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Create Workout'
+        return context
+
 
 class TrainingDetailsView(LoginRequiredMixin, DetailView):
     """Load the details template for the chosen training session."""
@@ -55,6 +60,11 @@ class TrainingUpdateView(LoginRequiredMixin, UpdateView):
             "training_details",
             kwargs={'pk': self.object.training_session.pk}
         )
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Workout'
+        return context
 
 
 #TODO create TrainingDeleteView
@@ -80,4 +90,3 @@ class TrainingDeleteView(LoginRequiredMixin, FormView, DeleteView):
             pk=self.object.pk,
         )
         return context
-    

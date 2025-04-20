@@ -1,15 +1,36 @@
 {% extends 'home_templates/home.html' %}
+{% load widget_tweaks %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2>Delete Workout {{ training_session.date }} - {{ training_session.get_workout_type_display }}</h2>
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg rounded-4 border-0">
+            <div class="card-body p-5 text-center">
+                <h2 class="text-danger mb-4">
+                    <i class="bi bi-trash-fill me-2"></i>
+                    Delete Workout
+                </h2>
+                <p class="fs-5">
+                    Are you sure you want to delete the workout from
+                    <strong>{{ training_session.date }}</strong> -
+                    <strong>{{ training_session.get_workout_type_display }}</strong>?
+                </p>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+                <form method="post" class="mt-4">
+                    {% csrf_token %}
+                    {{ form.as_p }}
 
-        <button type="submit" class="btn btn-primary">Delete Workout</button>
-        <a href="{% url 'trainings' %}" class="btn btn-secondary">Cancel</a>
-    </form>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-danger btn-lg">
+                            <i class="bi bi-trash me-1"></i> Confirm Delete
+                        </button>
+                        <a href="{% url 'trainings' %}" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-1"></i> Cancel
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

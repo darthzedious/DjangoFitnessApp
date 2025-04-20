@@ -1,24 +1,25 @@
 {% extends 'home_templates/home.html' %}
 
-
 {% block content %}
-        <div class="container mt-4">
-        <div class="card shadow-lg">
-            <div class="card-header bg-primary text-white">
-                <h3 class="mb-0">Create Workout</h3>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg border-0">
+            <div class="card-header bg-primary text-white text-center">
+                <h3 class="mb-0">{{ title }}</h3>
             </div>
 
             <div class="card-body">
-                <form method="post" class="form-group mb-4">
+                <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-success">Save Workout</button>
-                </form>
-            </div>
 
-            <div class="card-footer text-right">
-                <a href="{% url 'trainings' %}" class="btn btn-secondary">Back to all Workouts</a>
+                    <div class="d-flex justify-content-between mt-4">
+                        <button type="submit" class="btn btn-success">{{ title }}</button>
+                        <a href="{% url 'trainings' %}" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

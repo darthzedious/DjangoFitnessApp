@@ -38,13 +38,14 @@ class SetLogCreateView(LoginRequiredMixin, CreateView):
 
         context['training_session'] = self.training_session
         context['training_exercise'] = self.training_exercise
+        context['form_type'] = 'Add Set'
 
         return context
 
 
 class SetlogUpdateView(LoginRequiredMixin, UpdateView):
     form_class = SetLogForm
-    template_name = 'training/setlog_templates/setlog_edit_template.html'
+    template_name = 'training/setlog_templates/setlog_create_template.html'
     model = SetLog
 
     def get_success_url(self):
@@ -58,6 +59,7 @@ class SetlogUpdateView(LoginRequiredMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
+        context['form_type'] = 'Edit Set'
         context['training_session'] = get_object_or_404(
             TrainingSession,
             pk=self.object.training_exercise.training_session.pk,
@@ -90,6 +92,7 @@ class SetLogDeleteView(LoginRequiredMixin, FormView, DeleteView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
+        context['form_type'] = 'Delete Set'
         context['training_session'] = get_object_or_404(
             TrainingSession,
             pk=self.object.training_exercise.training_session.pk,

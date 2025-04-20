@@ -48,6 +48,7 @@ class TrainingExerciseCreateView(LoginRequiredMixin, CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['form_type'] = 'Add Exercise'
         context['training_session'] = self.training_session
         return context
 
@@ -80,6 +81,7 @@ class TrainingExerciseUpdateView(LoginRequiredMixin, UpdateView):
     def get_context_data(self, **kwargs):
         """Update the context data sent to the template."""
         context = super().get_context_data(**kwargs)
+        context['form_type'] = 'Edit Exercise'
         context['training_session'] = get_object_or_404(
             TrainingSession,
             pk=self.object.training_session.pk,
@@ -115,6 +117,7 @@ class TrainingExerciseDeleteView(LoginRequiredMixin, FormView,  DeleteView):
     def get_context_data(self, **kwargs):
         """Update context data sent to the template."""
         context = super().get_context_data(**kwargs)
+        context['form_type'] = 'Delete Exercise'
         context['training_session'] = get_object_or_404(
             TrainingSession,
             pk=self.object.training_session.pk,
