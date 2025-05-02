@@ -27,7 +27,7 @@ class ExerciseCreateView(LoginRequiredMixin, CreateView):
 class ExerciseListView(LoginRequiredMixin, ListView):
     template_name = "training/exercise_templates/exercise_list_template.html"
     context_object_name = "exercises"
-    paginate_by = 1
+    paginate_by = 5
 
     def get_queryset(self):
         """Get the queryset with the objects that will be displayed in the list view.

@@ -5,14 +5,15 @@
     <div class="container mt-4">
         <h2 class="mb-4">Meals in Category: <strong>{{ category }}</strong></h2>
 
-        <form method="GET" action="" class="mb-4">
-            <div class="input-group">
-                <input type="text" class="form-control" name="search" placeholder="Search by meal name or brand" value="{{ request.GET.search }}">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="submit">Search</button>
-                </div>
-            </div>
-        </form>
+{#        <form method="GET" action="" class="mb-4">#}
+{#            <div class="input-group">#}
+{#                <input type="text" class="form-control" name="search" placeholder="Search by meal name or brand" value="{{ request.GET.search }}">#}
+{#                <div class="input-group-append">#}
+{#                    <button class="btn btn-primary" type="submit">Search</button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </form>#}
+    {% include 'home_templates/search_bar.html' %}
 
         {% if meals %}
             <div class="row">

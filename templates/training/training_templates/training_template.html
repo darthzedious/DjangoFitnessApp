@@ -4,6 +4,21 @@
 <div class="container mt-4">
     <h2 class="mb-4">Your Training Sessions</h2>
 
+{% include 'home_templates/search_bar.html' %}
+
+<!-- Filter by Type -->
+<div class="mb-4">
+    <div class="btn-group" role="group" aria-label="Filter by type">
+        <a href="{% url 'trainings' %}" class="btn btn-outline-primary {% if not selected_type %}active{% endif %}">All</a>
+    {% for value, label in all_types %}
+    <a href="?type={{ value }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}"
+       class="btn btn-outline-primary {% if selected_type == value %}active{% endif %}">
+        {{ label }}
+    </a>
+{% endfor %}
+    </div>
+</div>
+
     {% if trainings %}
         <div class="row row-cols-1 row-cols-md-2 g-4">
             {% for training in trainings %}

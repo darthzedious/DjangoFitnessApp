@@ -1,10 +1,14 @@
+from urllib.parse import urlencode
+
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView, FormView
 
+from DjangoFitnessApp.trainings_app.choices import WorkoutTypeChoices
 from DjangoFitnessApp.trainings_app.forms import TrainingSessionForm, TrainingSessionDeleteForm
-from DjangoFitnessApp.trainings_app.models import TrainingSession
+from DjangoFitnessApp.trainings_app.models import TrainingSession, Exercise
 
 
 class TrainingsView(ListView):
@@ -14,6 +18,37 @@ class TrainingsView(ListView):
     context_object_name = "trainings"
     model = TrainingSession
     paginate_by = 10
+
+    def get_queryset(self):
+        search_query = self.request.GET.get("search", '')
+        type_filter = self.request.GET.get("type", '')
+
+        queryset = TrainingSession.objects.all()
+
+        if search_query:
+            queryset = queryset.filter(
+                Q(workout_type__icontains=search_query) |
+                Q(gym__icontains=search_query) |
+                Q(date__icontains=search_query)
+            )
+
+        if type_filter:
+            queryset = queryset.filter(workout_type=type_filter)
+
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        query_dict = self.request.GET.copy()
+        if 'page' in query_dict:
+            query_dict.pop('page')
+        context['query_string'] = urlencode(query_dict)
+
+        context['selected_type'] = self.request.GET.get('type', '')
+        context['session_pk'] = self.kwargs.get('session_pk') #if session_pk else None (if accessed to create trainexercise)
+        context['all_types'] = WorkoutTypeChoices.choices  # Pass types to template
+        return context
 
 
 class TrainingCreateView(LoginRequiredMixin, CreateView):
