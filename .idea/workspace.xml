@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7175677f-cbe6-4c5c-9f06-7baf31cbcdce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/trainings_app/views/exercise_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/trainings_app/views/exercise_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoFitnessApp/trainings_app/views/training_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoFitnessApp/trainings_app/views/training_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/meals/meal/meals_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meals/meal/meals_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/training/exercise_templates/exercise_list_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/training/exercise_templates/exercise_list_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/training/training_templates/training_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/training/training_templates/training_template.html" afterDir="false" />
-    </list>
+    <list default="true" id="7175677f-cbe6-4c5c-9f06-7baf31cbcdce" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +173,7 @@
       <workItem from="1743537668736" duration="115276000" />
       <workItem from="1744354130209" duration="3536000" />
       <workItem from="1744974307229" duration="50450000" />
-      <workItem from="1745340699480" duration="1984000" />
+      <workItem from="1745340699480" duration="5511000" />
     </task>
     <servers />
   </component>
